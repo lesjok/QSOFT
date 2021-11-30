@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  color: #768298; 
+  padding: 0;
+  margin: 0 auto;
+}
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+div, p, input, button, form, span, a, ul, li {
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;    
+  }
+  &__logo {
+    flex: 0 1 10%;
+    min-height: 31px
+  }
+  
+  &__input {
+    position: relative;
+    width: 65%;
+      .input-area {
+      min-height: 40px;
+      transform: translateX(-10px);
+      border: 1px solid #EBEBF1;
+      border-radius: 5px;
+      padding-left: 38.2px;
+      width: 100%;
+      letter-spacing: 0.5px;
+      padding-top: 2px;
+    }
+    .input__search {
+      position: absolute;
+      left: 0px;
+      top: 7px;
+      width: 24px;
+      height: 25px;
+    }
+  }
+  &__login {
+    display: none;
+  }
+  &__user {
+    min-width: 131px;
+    padding-right: 2px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &::before {
+      content: '';
+      display: block;
+      min-height: 81px;
+      width: 1px;
+      background-color: #EBEBF1;
+      position: absolute;
+      left: -20px;
+    }
+    .user__photo {
+      width: 40px;
+    }
+  }
+}
+.main {
+  &__container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 78px;
+  }
+  &__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 39px;
+    font-size: 2.4em;
+    letter-spacing: 1.2px;
+  }
+  &__brends {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 31px;
+      .brend {
+        cursor: url('img/cursor.png'), pointer;
+        border: 1px solid #EBEBF1;
+        height: 119px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 32px;
+        padding-bottom: 33px;
+        min-width: 23%;
+        max-width: 100%;
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      &:hover {
+        box-shadow: -3px 0 40px rgba(0, 0, 0, 0.1),
+        0 0 10px rgba(164, 164, 164, 0.03);
+        background-color: #fff;
+      }
+      & img {
+        max-height: 120px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media (max-width: 1216px) {
+  .header__container {
+    padding-left: 24px;
+    padding-right: 19px;
+  }
+  .header {
+    &__input {
+        width: 55%;
+    }
+  }
+  .main {
+    &__container {
+      padding-left: 55px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 874px) {
+  .header {
+    &__container {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 20px 18px 20px 20px;
+    }
+    .input-area {
+      transform: translateX(20px);
+      width: 85%;
+      padding-left: 36px;
+              
+    }
+    .input__search {
+      left: 28px;
+    }
+  }
+  .main {
+    &__container {
+      max-width: 768px;
+      margin: 0 auto;
+      padding-top: 76px;
+      padding-left: 20px;
+    }
+    &__title {
+      letter-spacing: 0.6px;
+      font-size: 1.9em;
+      padding-bottom: 36px;
+    }
+    &__brends {
+      gap: 21.3px;
+      .brend {
+        min-width: 30.5%;
+        .brend__logo {
+          &--jonhdeere {
+            width: 185px;
+          }
+          &--nike  {
+            min-width: 145px;
+          }
+          &--mcdonald {
+            width: 100px;
+          }
+          &--ikea {
+            width: 175px;
+          }
+          &--reebok {
+            width: 190px;
+          }
+          &--caterpillar {
+            width: 195px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 375px) and (max-width: 767px){
+  .header {
+    &__container {
+      min-width: 375px;
+      flex-direction: column;
+      padding: 0;
+      padding-top: 17px;
+      position: relative;
+    }
+    &__logo {
+      align-self: start;
+      padding-bottom: 17px;
+      padding-left: 20px;
+      padding-bottom: 16px;
+    }
+    &__user {
+      display: none;
+    }
+    &__login {
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+    top: 22px;
+    }
+    
+    &__input {
+        width: 100%;
+      .input__search {
+        padding-left: 20px;
+      }
+      .input-area {
+        border: none;
+        min-width: 390px;
+        border-radius: none;
+        padding-left: 59px;
+        border-top: 1px solid #E5E5E5;
+      }
+    }
+  }
+  .main {
+    &__container {
+      padding-top: 77px;
+      padding-left: 20px;
+      
+      .brend {
+        min-width: 100%;
+        min-height: 140px; 
+        &__logo {
+          &--henkel {
+            width: 145px;
+          }
+          &--nike  {
+            min-width: 145px;
+          }
+          &--mcdonald {
+            width: 100px;
+          }
+          &--ikea {
+            width: 195px;
+          }
+          &--caterpillar {
+            width: 245px;
+          }
+        } 
+      }   
+    }
+    &__title {
+      font-size: 1.9em;
+      letter-spacing: 0.6px;
+      padding-bottom: 36px;
+      }
+    &__brends {
+      padding-right: 20px;
+      gap: 20.2px;    
+    }   
+  }
+}
+@media (max-width: 374px) {
+  .header__input {
+    display: none;
+  }
+  .main {
+    &__brends {
+      padding-right: 36px;
+    }
+    .brend {
+      width: 100%;
+    }
+  }
+}
